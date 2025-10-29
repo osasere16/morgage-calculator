@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
+  </head>
+  <body class="d-grid">
+    <main class="d-grid">
+      <div class="calculator">
+        <div class="pad flow-content">
+          <div class="mort-top">
+            <h3 class="mort-header">Mortgage Calculator</h3>
+            <a href="" class="clear">Clear All</a>
+          </div>
+          <form action="" class="custom-flow-content">
+            <div class="mor-amount flow-content-sub">
+              <label for="amount">Mortgage Amount</label>
+              <div class="d-flex amount">
+                <span class="euro">£</span>
+                <input
+                  class="amount__input"
+                  type="text"
+                  name="amount"
+                  id="amount"
+                />
+              </div>
+              <p class="required">This field is required</p>
+            </div>
+            <div class="term-rate">
+              <div class="mor-term flow-content-sub">
+                <label for="years">Mortgage Term </label>
+                <div class="d-flex yearsContainer">
+                  <input
+                    class="years__input"
+                    type="number"
+                    name="years"
+                    id="years"
+                  />
+                  <span class="years">years</span>
+                </div>
+                <p class="required">This field is required</p>
+              </div>
+              <div class="Int-rate flow-content-sub">
+                <label for="rate">Interest Rate</label>
+                <div class="d-flex interest">
+                  <input
+                    class="rate__input"
+                    type="number"
+                    name="rate"
+                    id="rate"
+                  />
+                  <span class="rate">%</span>
+                </div>
+                <p class="required">This field is required</p>
+              </div>
+            </div>
+            <div class="mor-type d-flex">
+              <p>Mortgage Type</p>
+              <button class="mor-type__btn mor-type__btn-1">
+                <input
+                  class="r-btn rBtn1"
+                  type="radio"
+                  name="mort-type"
+                  id="repay"
+                  checked
+                  required
+                />
+                <label for="repay">Repayment</label>
+              </button>
+              <button class="mor-type__btn mor-type__btn-2">
+                <input
+                  class="r-btn rBtn2"
+                  type="radio"
+                  name="mort-type"
+                  id="interest"
+                  required
+                />
+                <label for="interest">Interest Only</label>
+              </button>
+              <p class="required">This field is required</p>
+            </div>
+            <!-- </div> -->
+          </form>
+          <div class="submit">
+            <button class="submit--btn d-flex">
+              <img src="assets/images/icon-calculator.svg" alt="" />
+              <p>Calculate Repayments</p>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Empty results start -->
+      <div class="empty-result d-hidden">
+        <div class="pad flow-content">
+          <img
+            src="assets/images/illustration-empty.svg"
+            alt="empty illustration image"
+          />
+          <h4 class="empty-result__header">Results shown here</h4>
+          <p class="empty-result__text">
+            Complete the form and click “calculate repayments” to see what your
+            monthly repayments would be.
+          </p>
+        </div>
+      </div>
+      <!-- Empty results end -->
+      <!-- Completed results start -->
+      <div class="complete-result">
+        <div class="pad flow-content">
+          <h3 class="complete-result__header">Your results</h3>
+          <p class="complete-result__text">
+            Your results are shown below based on the information you provided.
+            To adjust the results, edit the form and click “calculate
+            repayments” again.
+          </p>
+          <div class="repayment small-pad flow-content">
+            <p>Your monthly repayments</p>
+            <h1 class="repayment__header">£ 0.00</h1>
+            <div class="horizontal__line"></div>
+            <p>Total you'll repay over the term</p>
+            <h3 class="term__header">£ 0.00</h3>
+          </div>
+          <div class="interestContainer small-pad flow-content d-hidden">
+            <p>Your monthly interests</p>
+            <h1 class="interest__header">£ 0.00</h1>
+            <div class="horizontal__line"></div>
+            <p>Total interest you'll repay over the term</p>
+            <h3 class="interestTerm__header">£ 0.00</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Completed results end -->
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">shadrachosasere16@gmail.com</a>.
+    </div>
+
+    <script src="assets/script/index.js"></script>
+  </body>
+</html>
